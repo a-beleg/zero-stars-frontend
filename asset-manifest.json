@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.js": "/zero-stars-frontend/static/js/main.78fbac21.js",
+    "static/js/319.443c23d7.chunk.js": "/zero-stars-frontend/static/js/319.443c23d7.chunk.js",
+    "static/js/315.93889d79.chunk.js": "/zero-stars-frontend/static/js/315.93889d79.chunk.js",
+    "static/js/7.11b75bee.chunk.js": "/zero-stars-frontend/static/js/7.11b75bee.chunk.js",
+    "static/js/414.9df4287a.chunk.js": "/zero-stars-frontend/static/js/414.9df4287a.chunk.js",
+    "static/js/70.7d62fc8d.chunk.js": "/zero-stars-frontend/static/js/70.7d62fc8d.chunk.js",
+    "static/media/bg.svg": "/zero-stars-frontend/static/media/bg.5da6714135f0df2f25bfc926841ead51.svg",
+    "static/media/PixeloidSans.woff2": "/zero-stars-frontend/static/media/PixeloidSans.3564e1c428a6aea344f8.woff2",
+    "static/media/20.svg": "/zero-stars-frontend/static/media/20.6088822f71fbdabd0b55.svg",
+    "static/media/19.svg": "/zero-stars-frontend/static/media/19.377256f5e8ef13805c54.svg",
+    "static/media/18.svg": "/zero-stars-frontend/static/media/18.9ff028cdb11967531796.svg",
+    "static/media/17.svg": "/zero-stars-frontend/static/media/17.547c572b1daace701a47.svg",
+    "static/media/15.svg": "/zero-stars-frontend/static/media/15.726897d2ffca75126273.svg",
+    "static/media/16.svg": "/zero-stars-frontend/static/media/16.7ab44a6b730f365468aa.svg",
+    "static/media/14.svg": "/zero-stars-frontend/static/media/14.7f916a35d4bd50afbdfc.svg",
+    "static/media/13.svg": "/zero-stars-frontend/static/media/13.2993b3f8daac3f075b24.svg",
+    "static/media/12.svg": "/zero-stars-frontend/static/media/12.fbc72c7892d3ad4e33e9efd5f0fd2a93.svg",
+    "static/media/9.svg": "/zero-stars-frontend/static/media/9.b29fa7172de0e93c1415.svg",
+    "static/media/8.svg": "/zero-stars-frontend/static/media/8.e4f1d42f47d025b1af0a.svg",
+    "static/media/11.svg": "/zero-stars-frontend/static/media/11.c65ae4a6e2074738d5c4.svg",
+    "static/media/10.svg": "/zero-stars-frontend/static/media/10.a06d3021713279962245.svg",
+    "static/media/6.svg": "/zero-stars-frontend/static/media/6.7a34a455b5340bb98529.svg",
+    "static/media/7.svg": "/zero-stars-frontend/static/media/7.ba1bc57c9cf557d63f9c.svg",
+    "static/media/3.svg": "/zero-stars-frontend/static/media/3.5370b75788f0fb3f1a0d.svg",
+    "static/media/2.svg": "/zero-stars-frontend/static/media/2.55349bfccffabb97fd7c.svg",
+    "static/media/5.svg": "/zero-stars-frontend/static/media/5.682336b716f20eeb9ea9.svg",
+    "static/media/4.svg": "/zero-stars-frontend/static/media/4.81bc9086681dd885df29.svg",
+    "static/media/1.svg": "/zero-stars-frontend/static/media/1.a57dae4a51ce67c36b56.svg",
+    "index.html": "/zero-stars-frontend/index.html",
+    "main.78fbac21.js.map": "/zero-stars-frontend/static/js/main.78fbac21.js.map",
+    "319.443c23d7.chunk.js.map": "/zero-stars-frontend/static/js/319.443c23d7.chunk.js.map",
+    "315.93889d79.chunk.js.map": "/zero-stars-frontend/static/js/315.93889d79.chunk.js.map",
+    "7.11b75bee.chunk.js.map": "/zero-stars-frontend/static/js/7.11b75bee.chunk.js.map",
+    "414.9df4287a.chunk.js.map": "/zero-stars-frontend/static/js/414.9df4287a.chunk.js.map",
+    "70.7d62fc8d.chunk.js.map": "/zero-stars-frontend/static/js/70.7d62fc8d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.78fbac21.js"
+  ]
+}
