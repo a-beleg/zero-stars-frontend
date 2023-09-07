@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import smallStars from "../assets/stars";
 import {isMobile} from "react-device-detect";
+import {smallStars} from "../helpers/exports.ts";
 
 
 function useBottomLogic() {

@@ -1,7 +1,6 @@
 import * as S from "./StyledBottom";
-import smallStars from "../../assets/stars";
-import useBottomLogic from "../../hooks/useBottomLogic";
-import useMainLogic from "../../hooks/useMainLogic";
+import useBottomLogic from "../../hooks/useBottomLogic.tsx";
+import {smallStars} from "../../helpers/exports.ts";
 
 
 function Bottom() {
@@ -21,9 +20,9 @@ function Bottom() {
         handlePopUpClose
     } = useBottomLogic();
 
-    const {fontReady} = useMainLogic();
+
     return (
-        <S.Wrapper key={fontReady}>
+        <S.Wrapper>
             <S.Container>
                 <S.Title max={bottomMax}
                          onReady={handleTitleReady}
@@ -31,7 +30,8 @@ function Bottom() {
                 <S.RowContainer>
                     {tokens.map((token: string) => (
                         <S.Title
-                            selectable={true}
+                            key={token}
+                            selectable={true.toString()}
                             onClick={() => setCurrentToken(token)}
                             selected={currentToken === token}
                             max={fontSize}
@@ -45,7 +45,7 @@ function Bottom() {
                     <S.NavContainer>
                         {current !== 1 && <S.Arrow onClick={() => handleArrowClick("<")} direction="<"/>}
                     </S.NavContainer>
-                    <S.Star key={current} src={require(`../../assets/stars/${current}.svg`)}/>
+                    <S.Star key={current} src={new URL(`../../assets/stars/${current}.svg`, import.meta.url).href}/>
                     <S.NavContainer>
                         {current !== smallStars.length &&
                             <S.Arrow onClick={() => handleArrowClick(">")} direction=">"/>}
@@ -60,7 +60,7 @@ function Bottom() {
                     const content = `${key.toUpperCase()} ${stats[key as keyof typeof stats]}`;
                     return (
                         <S.Title
-                            selectable={key === 'view'}
+                            selectable={(key === 'view').toString()}
                             max={fontSize}
                             key={key}
                             content={content}
@@ -69,12 +69,11 @@ function Bottom() {
                     );
                 })}
             </S.RowContainer>
-
             {showPopUp && (
                 <S.PopUp onClick={handlePopUpClose}>
                     <S.PopUpContent>
                         <S.PopUpCloseButton onClick={handlePopUpClose}>{'x'}</S.PopUpCloseButton>
-                        <S.Star scaled={true} src={require(`../../assets/stars/${current}.svg`)}/>
+                        <S.Star scaled={true} src={new URL(`../../assets/stars/${current}.svg`, import.meta.url).href}/>
                     </S.PopUpContent>
                 </S.PopUp>
             )}

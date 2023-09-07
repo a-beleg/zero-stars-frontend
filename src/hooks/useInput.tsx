@@ -1,6 +1,6 @@
-import {useState, useRef, useCallback, useEffect, ChangeEvent} from 'react';
+import {useState, useRef, useCallback, useEffect, ChangeEvent, MutableRefObject} from 'react';
 
-const useInput = () => {
+const useInput = (handleStarClick: () => void, status: string, navigateToRef: (ref: MutableRefObject<HTMLDivElement | null>) => void) => {
     const [inputValue, setInputValue] = useState('0');
     const [focused, setFocused] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
@@ -25,6 +25,11 @@ const useInput = () => {
         if (focused) {
             let newValue = inputValue || '0';
             switch (event.key) {
+                case 'Enter':
+                    handleStarClick();
+                    setFocused(true);
+                    inputRef.current?.focus();
+                    break;
                 case 'Escape':
                     inputRef.current?.blur();
                     setFocused(false);
@@ -47,12 +52,24 @@ const useInput = () => {
             }
             setInputValue(newValue);
         } else if (event.key === 'Enter') {
+            handleStarClick();
             setFocused(true);
-            inputRef.current?.focus();
+            navigateToRef(inputRef);
         }
-    }, [focused, inputValue]);
+    }, [focused, handleStarClick, inputValue, navigateToRef]);
 
     useEffect(() => {
+        if (status === 'connected') {
+            setFocused(true);
+            inputRef.current?.focus();
+        } else {
+            setFocused(false);
+            inputRef.current?.blur();
+        }
+    }, [status]);
+
+    useEffect(() => {
+
         const handleFocus = () => setFocused(true);
         const handleBlur = () => setFocused(false);
 
@@ -73,7 +90,7 @@ const useInput = () => {
         inputValue,
         setFocused,
         inputRef,
-        handleInputChange,
+        handleInputChange
     };
 };
 

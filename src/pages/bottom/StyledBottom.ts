@@ -17,13 +17,13 @@ export const Wrapper = styled.div`
 export const Title = styled(Textfit)<{
     content: string,
     selected?: boolean
-    selectable?: boolean
+    selectable?: string
 }>`
   align-items: flex-start;
   white-space: nowrap;
   color: ${({selected}) => selected ? theme.black : theme.white};
   background-color: ${({selected}) => selected ? theme.white : theme.black};
-  cursor: ${({selectable}) => selectable ? "pointer" : "default"};
+  cursor: ${({selectable}) => selectable === 'true' ? "pointer" : "default"};
 
   &::before {
     content: "${({content}) => content}";

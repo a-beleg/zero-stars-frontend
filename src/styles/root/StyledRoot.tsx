@@ -1,6 +1,7 @@
 import styled, {createGlobalStyle} from "styled-components";
 import PixeloidSansWoff2 from "../fonts/PixeloidSans.woff2";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const theme = {
     white: "#FFF7F7",
     black: "black"
