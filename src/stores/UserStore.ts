@@ -1,7 +1,10 @@
 import {action, computed, makeAutoObservable} from "mobx";
 import {mainColumnsText} from "./static";
 import {Chain} from "viem";
-import {ChainsData, DefaultData} from "../hooks/useInitStore.tsx";
+
+export type ChainsData = { ZkSync: number, Arbitrum: number, ETH: number };
+export const DefaultData = {ZkSync: 0, Arbitrum: 0, ETH: 0}
+
 
 export class UserStore {
     connectedAccount: `0x${string}` | undefined = undefined;
@@ -34,6 +37,7 @@ export class UserStore {
         chain: Chain & {
             unsupported?: boolean | undefined;
         } | undefined) {
+        console.log('store initialize');
         this.status = status;
         this.connectedAccount = address;
         this.open = open;

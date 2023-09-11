@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {isMobile} from "react-device-detect";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -10,12 +9,16 @@ export const Wrapper = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
+  display: grid;
   margin: auto;
-  display: ${() => isMobile ? 'flex' : 'grid'};
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5%;
   justify-items: end;
   justify-content: space-evenly;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
 `;
 
 export const TopStar = styled.img`

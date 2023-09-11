@@ -1,15 +1,11 @@
-import {createStore} from "../stores/UserStore";
+import {ChainsData, createStore} from "../stores/UserStore";
 import {useAccount, useDisconnect, useNetwork} from "wagmi";
 import {useWeb3Modal} from "@web3modal/react";
 import {useZeroStarsBalanceOf, useZeroStarsTotalSupply} from "../contracts/contract";
 import {Hex} from "viem";
 import {arbitrumGoerli, goerli, zkSyncTestnet} from "wagmi/chains";
 
-export type ChainsData = { ZkSync: number, Arbitrum: number, ETH: number };
-export const DefaultData = {ZkSync: 0, Arbitrum: 0, ETH: 0}
-
-
-const useInitStore = () => {
+export const useInitStore = () => {
 
     const store = createStore();
     const {open} = useWeb3Modal();
@@ -39,7 +35,7 @@ const useInitStore = () => {
     }
 
     store.initialize(status, address, open, disconnect, userTokens, totalSupply, chain);
+
     return {store};
 };
 
-export {useInitStore};
